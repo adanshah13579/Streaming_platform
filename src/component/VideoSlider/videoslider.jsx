@@ -12,9 +12,9 @@ const VideoSlider = () => {
     <Box
       sx={{
         padding: { xs: 2, sm: 4 },
-        height: "100%",
+        height: "85%",
         backgroundColor: colors.background, // Use your background color from the colors file
-        overflowX: "hidden", // Prevent horizontal overflow on small screens
+        overflowX: "hidden",
       }}
     >
       {/* Heading Outside the Grey Box */}

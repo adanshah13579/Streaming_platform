@@ -44,15 +44,16 @@ const HeroSection = () => {
           <Button
           variant="contained"
           sx={{
-            backgroundColor: "red", // Red background for the button
+            backgroundColor: "#E85B5B", // Red background for the button
             color: "white",
             fontWeight: "bold",
+            borderRadius:"10px",
             fontSize: { xs: "12px", sm: "14px" },
             textTransform: "uppercase",
-            padding: "8px 16px",
+            padding: "8px 19px",
             marginBottom: "10px",
             "&:hover": {
-              backgroundColor: "darkred",
+              backgroundColor: "#E85B5B",
             },
             display: "flex",
             alignItems: "center",
@@ -65,37 +66,37 @@ const HeroSection = () => {
 
         {/* Small Heading */}
         <Typography
-          variant="h6"
+          variant="caption"
           sx={{ marginBottom: "10px", fontSize: { xs: "16px", sm: "18px" } }}
         >
-          Small Heading Text Here
-        </Typography>
+Current Dare: $500 USD        </Typography>
 
         {/* Large Heading */}
         <Typography
-          variant="h3"
-          sx={{
-            fontWeight: "bold",
-            fontSize: { xs: "24px", sm: "32px", md: "40px" },
-            marginBottom: "20px",
-          }}
-        >
-          Welcome to the{" "}
-          <span style={{ color: "yellow" }}>Live Experience!</span>
-        </Typography>
+  variant="h3"
+  sx={{
+    fontWeight: "bold",
+    fontSize: { xs: "24px", sm: "32px", md: "40px" },
+    marginBottom: "20px",
+  }}
+>
+  Get a girl’s number in{" "}
+  <span style={{ color: "#FFB800" }}>10 minutes</span>
+</Typography>
+
 
         {/* Avatar and Name */}
         <Box
           sx={{
             display: "flex",
             alignItems: "center",
-            marginBottom: "20px",
+            marginBottom: "25px",
           }}
         >
           <Avatar
             src="https://via.placeholder.com/60"
             alt="John Doe"
-            sx={{ marginRight: "10px", width: "50px", height: "50px" }}
+            sx={{ marginRight: "10px", width: "40px", height: "40px" }}
           />
           <Typography
             variant="h6"
@@ -109,8 +110,9 @@ const HeroSection = () => {
         <Button
           variant="contained"
           sx={{
+            borderRadius:"10px",
             backgroundColor: colors.buttoncolor,
-            fontWeight: "bold",
+            
             "&:hover": { backgroundColor: "orange" },
           }}
         >

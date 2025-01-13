@@ -9,12 +9,14 @@ import SquareCard from "./component/Squrecard/sqaurecard";
 import PopularCategories from "./component/Popularcategories/popularcategories";
 import RecommendedVideos from "./component/Recommendedvideos/recommendedvideos";
 import VideoSlider from "./component/VideoSlider/videoslider";
+import FollowingPage from "./pages/FollowingPage/followingpage";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<VideoSlider />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/following" element={<FollowingPage />}></Route>
       </Routes>
     </Router>
   );

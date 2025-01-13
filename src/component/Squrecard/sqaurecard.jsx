@@ -6,7 +6,7 @@ import str4 from "../../assets/images/str4.png"; // Default image
 
 const SquareCard = ({
   imageSrc = str4,
-  title = "Live Event",
+  title = "Just Chilling",
   watchingCount = "1.4K",
 }) => {
   return (
@@ -50,17 +50,52 @@ const SquareCard = ({
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
             alignItems: "center",
             position: "absolute",
-            top: "10px",
-            left: "10px",
+            top: "30px",
+            left: "30px",
             right: "10px",
             zIndex: 1,
+            gap: "10px", // Adds spacing between icons
           }}
         >
-          <ArrowBack sx={{ color: "white", fontSize: 30, cursor: "pointer" }} />
-          <ArrowForward sx={{ color: "white", fontSize: 30, cursor: "pointer" }} />
+          {/* ArrowBack with circular background */}
+          <Box
+            sx={{
+              width: "40px", // Adjust size for the circle
+              height: "40px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "rgba(250, 249, 249, 0.94)", // Semi-transparent black background
+              borderRadius: "50%", // Makes it circular
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "rgba(250, 249, 249, 0.94)", // Darker on hover
+              },
+            }}
+          >
+            <ArrowBack sx={{ color: "black", fontSize: 25 }} />
+          </Box>
+
+          {/* ArrowForward with circular background */}
+          <Box
+            sx={{
+              width: "40px",
+              height: "40px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "rgba(250, 249, 249, 0.94)",
+              borderRadius: "50%",
+              cursor: "pointer",
+              "&:hover": {
+                backgroundColor: "rgba(250, 249, 249, 0.94)",
+              },
+            }}
+          >
+            <ArrowForward sx={{ color: "black", fontSize: 25 }} />
+          </Box>
         </Box>
 
         {/* Content Section (Text and Button at the bottom left) */}
@@ -83,7 +118,10 @@ const SquareCard = ({
               color: "white",
               fontWeight: "bold",
               marginBottom: "8px",
-              fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "24px" }, // Increased font size for larger screens
+              fontSize: { xs: "16px", sm: "18px", md: "20px", lg: "24px" },
+               fontFamily:'Poppins',
+                fontWeight:'500'
+             
             }}
           >
             {title}
@@ -104,7 +142,9 @@ const SquareCard = ({
               variant="body2"
               sx={{
                 color: "white",
-                fontSize: { xs: "14px", sm: "16px", md: "18px", lg: "20px" }, // Adjust font size for different screens
+                fontSize: { xs: "14px", sm: "16px", md: "18px", lg: "10px" },
+                fontFamily:'Poppins',
+                fontWeight:'300'
               }}
             >
               {watchingCount} watching
@@ -121,7 +161,13 @@ const SquareCard = ({
                 backgroundColor: colors.hoverBackground, // Hover effect from global colors
               },
               marginTop: "8px",
-              fontSize: { xs: "14px", sm: "16px", md: "18px", lg: "20px" }, // Increase button font size for larger screens
+              borderRadius: "16px",
+              fontSize: { xs: "10px", sm: "12px", md: "14px", lg: "11px" }, // Smaller font size
+              padding: { xs: "8px 16px", sm: "10px 20px" }, // Consistent padding
+              minWidth: "131ox", // Maintain width
+              minHeight: "46px", // Maintain height
+              boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.6)", // Default shadow (elevation)
+              transition: "box-shadow 0.3s ease-in-out", 
             }}
           >
             Follow

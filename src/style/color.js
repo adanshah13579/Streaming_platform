@@ -6,8 +6,7 @@ const colors = {
   textColor: "white",
   buttoncolor:" #6C5CD3",
   cardbackground:" #1E2342",
-
-  // Add other colors here as needed
+  greycardcolor:"#242731",
 };
 
 

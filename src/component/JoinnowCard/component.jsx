@@ -3,16 +3,17 @@ import { Box, Typography, IconButton, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import colors from "../../style/color";
 
-const CardComponent = ({ imageSrc, text }) => {
+const CardComponent = ({ imageSrc, text,SideBar = true }) => {
   return (
     <Box
       sx={{
         position: "relative",
         width: "87%",
-        height: "300px",
+        height: "230px",
         borderRadius: "20px",
         overflow: "hidden",
-        boxShadow: 2,
+        boxShadow: 2,marginTop:'10px',
+        marginLeft:'10px'
       }}
     >
       <Box
@@ -51,7 +52,7 @@ const CardComponent = ({ imageSrc, text }) => {
         }}
       >
         <Typography
-          variant="h4"
+          variant="h5"
           sx={{ color: colors.textColor, fontWeight: "bold" }}
         >
           {text}
@@ -59,6 +60,7 @@ const CardComponent = ({ imageSrc, text }) => {
       </Box>
 
       {/* Small Heading Below "Awesome Card" */}
+      {SideBar && 
       <Box
         sx={{
           position: "absolute",
@@ -66,17 +68,21 @@ const CardComponent = ({ imageSrc, text }) => {
           left: "50%",
           transform: "translateX(-50%)",
           textAlign: "center",
+        
+          width:'90%'
         }}
       >
-        <Typography variant="body2" sx={{ color: "#EFEFEF", fontWeight: "600" }}>
-          Small Heading Text
+        <Typography variant="caption" sx={{ color: "#EFEFEF", fontWeight: "600" }}>
+        Take on challenges and make quick cash!
         </Typography>
       </Box>
+     }
 
 
      
 
       {/* Join Now Button */}
+     
       <Box
         sx={{
           position: "absolute",
