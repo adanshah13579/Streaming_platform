@@ -6,7 +6,7 @@ export const ExtremeDareCard = ({ backgroundColor = 'red' }) => {
   return (
     <Card
       sx={{
-        width: 250, // Make the card take up full width based on breakpoints
+        width: "100%", // Make the card take up full width based on breakpoints
        
         height: 100, // Full height
         display: 'flex',

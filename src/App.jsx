@@ -10,13 +10,19 @@ import PopularCategories from "./component/Popularcategories/popularcategories";
 import RecommendedVideos from "./component/Recommendedvideos/recommendedvideos";
 import VideoSlider from "./component/VideoSlider/videoslider";
 import FollowingPage from "./pages/FollowingPage/followingpage";
+import StartStreaming from "./pages/StartStreamingPage/startstreaming";
+import MyVideosPage from "./pages/MyVideosPage/myvideospage";
+import Login from "./pages/Authentication/Login";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
-        <Route path="/following" element={<FollowingPage />}></Route>
+        {/* <Route path="/" element={<HomePage />}></Route>
+        <Route path="/following" element={<FollowingPage />}></Route> */}
+        {/* <Route path="/" element={<FollowingPage />}></Route> */}
+        <Route path="/" element={<Login />}></Route>
+
       </Routes>
     </Router>
   );
