@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import LoginComponent from "../../component/AuthenticationComponents/LoginComponent";
 import { ExtremeDareCard } from "../../component/ExtremeDareCardHorizontal/ExtremeDareCard";
+import LoginLeftSide from "../../component/AuthenticationComponents/LoginLeftside";
 
 const Login = () => {
   const backgroundImageUrl =
@@ -31,29 +32,26 @@ const Login = () => {
         sx={{
           display: "flex",
           flexDirection: { xs: "column", sm: "row" }, // Stack vertically on small screens, horizontally on larger screens
-          width: "80%",
-          backgroundColor: "blue",
+          width: "60%",
           height: "auto",
         }}
       >
         <Box
           sx={{
             display: { xs: "none", sm: "flex" }, // Hide on small screens
-            justifyContent: "flex-start",
-            backgroundColor: "red",
+            justifyContent: "center",
             width: { xs: "100%", sm: "50%" },
             height: "auto",
           }}
         >
-          {/* Left Item */}
-          <ExtremeDareCard />
+          <LoginLeftSide />
         </Box>
 
         <Box
           sx={{
             display: "flex",
             justifyContent: "center",
-            backgroundColor: "green",
+
             width: { xs: "100%", sm: "50%" },
             height: "auto",
           }}

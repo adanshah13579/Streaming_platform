@@ -6,15 +6,19 @@ import FaceIcon from "@mui/icons-material/Face"; // Smile emoji icon
 import v1 from "../../assets/images/v1.png";
 import tn from "../../assets/images/tn.png";
 import colors from "../../style/color";
+import FollowerUploaded from "../Followersrecently/followersrecently";
 
 const VideoSlider = () => {
   return (
+    <>
     <Box
       sx={{
         padding: { xs: 2, sm: 4 },
-        height: "85%",
-        backgroundColor: colors.background, // Use your background color from the colors file
-        overflowX: "hidden",
+        height: "100%",
+        backgroundColor: colors.background,
+        maxHeight:"100%",
+        // Use your background color from the colors file
+        
       }}
     >
       {/* Heading Outside the Grey Box */}
@@ -55,8 +59,8 @@ const VideoSlider = () => {
               display: "flex",
               flexDirection: "column",
               gap: 2,
-              position: "relative",
-              padding: "5px", // Add padding to create space between the grey box and the video player
+              
+              padding: "2px", // Add padding to create space between the grey box and the video player
               overflow: "hidden", // Prevent overflow of the video content
             }}
           >
@@ -68,9 +72,9 @@ const VideoSlider = () => {
                 overflow: "hidden",
                 backgroundColor: "#000", // Placeholder for video background
                 position: "relative",
-                height: { xs: "35%", sm: "50%", md: "80%" }, // Adjust for various screens
-                width: {xs: "85%", sm: "93%", md: "100%" }, // Ensure full width
-                maxWidth: "100%", // Ensure the video fits within the parent container
+                height: { xs: "40%", sm: "50%", md: "80%" }, // Adjust for various screens
+                width: {xs: "100%", sm: "100%", md: "100%" ,}, // Ensure full width
+                maxWidth: "95%", // Ensure the video fits within the parent container
               }}
             >
                {/* Strip Box */}
@@ -113,7 +117,7 @@ const VideoSlider = () => {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "flex-start",
-                marginTop: 2,
+                marginTop: 1,
               }}
             >
               {/* Live Button */}
@@ -123,7 +127,7 @@ const VideoSlider = () => {
                 sx={{
                   backgroundColor: "#FF4500",
                   color: "#fff",
-                  fontSize: "12px",
+                  fontSize: "10px",
                   padding: "4px 12px",
                   textTransform: "uppercase",
                   borderRadius: "20px",
@@ -169,13 +173,16 @@ const VideoSlider = () => {
           <Box
             sx={{
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              justifyContent: { xs: "center", sm: "center" },
+              alignItems:  { xs: "center", sm: "center" },
               flexDirection: "column",
               gap: 2,
-              flex: { xs: "100%", sm: "0.5" }, // Ensure cards take full width on small screens
+              flex: { xs: "100%", sm: "0.5" },
+              
               overflow: "hidden", // Prevent overflow of the cards
-              maxWidth: "100%", // Prevent cards from overflowing the container
+              maxWidth: "60%",
+              maxHeight: "100",
+              minWidth:"30%",
             }}
           >
             {/* Card 1 - Thumbnail Only with Border Radius */}
@@ -187,9 +194,9 @@ const VideoSlider = () => {
                 boxShadow: 2,
                 backgroundColor: "#fff",
                 height: { xs: "50%", sm: "50%", md: "20%" }, // Adjust height responsively
-                width: { xs: "90%", sm: "80%", md: "60%" }, // Make sure cards take full width on small screens
-                justifyContent: "center", // Center the image
-                alignItems: "center", // Align the image in the center
+                width: { xs: "90%", sm: "80%", md: "60%" },
+                // Make sure cards take full width on small screens
+                
               }}
             >
               <CardMedia
@@ -280,8 +287,13 @@ const VideoSlider = () => {
             </Card>
           </Box>
         </Box>
+     
       </Box>
+      
     </Box>
+    
+       
+       </>
   );
 };
 

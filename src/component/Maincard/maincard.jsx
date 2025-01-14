@@ -15,7 +15,7 @@ const ModernCard = ({
   return (
     <Box
       sx={{
-        width: "300px",
+        width: "280px",
         borderRadius: "16px",
         overflow: "hidden",
         boxShadow: 3,

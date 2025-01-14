@@ -13,16 +13,16 @@ import FollowingPage from "./pages/FollowingPage/followingpage";
 import StartStreaming from "./pages/StartStreamingPage/startstreaming";
 import MyVideosPage from "./pages/MyVideosPage/myvideospage";
 import Login from "./pages/Authentication/Login";
+import SignupPage from "./pages/Authentication/Signup";
+import SignupComponent from "./component/AuthenticationComponents/signup";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        {/* <Route path="/" element={<HomePage />}></Route>
-        <Route path="/following" element={<FollowingPage />}></Route> */}
-        {/* <Route path="/" element={<FollowingPage />}></Route> */}
-        <Route path="/" element={<Login />}></Route>
-
+        <Route path="/homepage" element={<HomePage />}></Route>
+        <Route path="/following" element={<FollowingPage />}></Route>
+        <Route path="/" element={<SignupPage />}></Route>
       </Routes>
     </Router>
   );
