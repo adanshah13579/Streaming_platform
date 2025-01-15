@@ -18,7 +18,7 @@ import PlaylistAddIcon from '@mui/icons-material/PlaylistAdd';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import vv1 from "../../assets/images/vv1.png"; // Default image
 
-export default function VideoPageCard() {
+export default function VideoPageCard({isBelowIcon=true}) {
   return (
     <Card
       sx={{
@@ -27,6 +27,9 @@ export default function VideoPageCard() {
         color: '#fff',
         borderRadius: '24px',
         position: 'relative',
+        minWidth:250,
+       height:!isBelowIcon? "320px":'auto',
+
       }}
     >
       <CardActionArea>
@@ -130,9 +133,12 @@ export default function VideoPageCard() {
       </CardActionArea>
 
       {/* Divider Line */}
-      <Divider sx={{ bgcolor: 'gray', my: 1 }} />
+      
 
       {/* Icons Section */}
+      { isBelowIcon && (
+        <>
+        <Divider sx={{ bgcolor: 'gray', my: 1 }} />
       <Stack direction="row" justifyContent="space-around" alignItems="center" sx={{ p: 0.5 }}>
         <IconButton sx={{ color: '#808191', fontSize:"1px" }}>
           <ThumbUpAltIcon sx={{ fontSize:"20px" }}/>
@@ -146,7 +152,10 @@ export default function VideoPageCard() {
         <IconButton sx={{ color: '#808191' }}>
           <VisibilityIcon sx={{ fontSize:"20px" }}/>
         </IconButton>
+    
       </Stack>
+      </>
+        )}
     </Card>
   );
 }

@@ -14,7 +14,9 @@ import StartStreaming from "./pages/StartStreamingPage/startstreaming";
 import MyVideosPage from "./pages/MyVideosPage/myvideospage";
 import Login from "./pages/Authentication/Login";
 import SignupPage from "./pages/Authentication/Signup";
-import SignupComponent from "./component/AuthenticationComponents/signup";
+import PublicDarePage from "./pages/PublicDarePage/publicdareindex";
+import ChannelProfilepage from "./pages/LiveVideoPage/Livevideopage";
+import LiveVideoPage from "./pages/LiveVideoPage/Livevideopage";
 
 const App = () => {
   return (
@@ -22,7 +24,12 @@ const App = () => {
       <Routes>
         <Route path="/homepage" element={<HomePage />}></Route>
         <Route path="/following" element={<FollowingPage />}></Route>
-        <Route path="/" element={<SignupPage />}></Route>
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/signup" element={<SignupPage />}></Route>
+        <Route path="/h" element={<PublicDarePage />}></Route>
+        <Route path="/" element={<LiveVideoPage/>}></Route>
+
+
       </Routes>
     </Router>
   );

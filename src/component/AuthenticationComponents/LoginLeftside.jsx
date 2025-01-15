@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography } from "@mui/material";
 import { ExtremeDareCard } from "../../component/ExtremeDareCardHorizontal/ExtremeDareCard";
 import icon from "../../assets/images/icon.png"; // Importing the icon image
+import AddBoxIcon from '@mui/icons-material/AddBox';
 
 const LoginLeftSide = () => {
   return (
@@ -72,16 +73,21 @@ const LoginLeftSide = () => {
         variant="caption"
         sx={{
           color: "white",
-          fontWeight: "400",
+          fontWeight: "500",
+          padding:"5px"
         }}
       >
-        <img
-          src={icon}
+        <AddBoxIcon
+          
           alt="Small Icon"
           style={{
             width: "12px",
             height: "12px",
-            marginRight: "4px",
+          
+            top:"1px",
+            position:"relative"
+            
+
             
           }}
         />{" "}

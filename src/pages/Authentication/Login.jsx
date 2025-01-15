@@ -4,7 +4,7 @@ import LoginComponent from "../../component/AuthenticationComponents/LoginCompon
 import { ExtremeDareCard } from "../../component/ExtremeDareCardHorizontal/ExtremeDareCard";
 import LoginLeftSide from "../../component/AuthenticationComponents/LoginLeftside";
 
-const Login = () => {
+const LoginPage = () => {
   const backgroundImageUrl =
     "https://s3-alpha-sig.figma.com/img/a019/386e/00332f5ef33efa6e2c0bd933f4191093?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=okggxD2mREaoUc8FAthaG1DrX9SthIBbA3XlQXGjoBdJcSmvewHEZTJ6-1QHmGueupu1TmV-AxPjc2dVg6x-GZUAkykyv2Vs1cGvFU6yintfItprzMhlgYfd1dgFzMapwDNPtodHYi1GN1xA6bPkXxJD4tKxSwi6OFvdxOd-phM5jdqnvTBFkGpv9GHPZtmjt0~kMNZo-1SwB5gu5R69SoR0EWjfgu0vBwitCwKv7m6X6evxFzB6L9SUkY-TeomHE7nQ5mqTOBnnMsRmRWuiuoL-Ci7u71Undyo-0YnmO8~sUi1EipgreNsnpwp0B2Um8maMnwLHe-5qOldrN64yrA__";
 
@@ -63,4 +63,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default LoginPage;

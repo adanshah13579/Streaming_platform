@@ -51,7 +51,7 @@ const SignupComponent = () => {
         fontFamily="Poppins"
         fontSize="22px"
       >
-        Sign In
+        Sign up
       </Typography>
 
       {/* Subheading */}
@@ -85,12 +85,12 @@ const SignupComponent = () => {
         <Box sx={{ flex: 1 }}>
           {" "}
           {/* Flex ensures equal width for both inputs */}
-          <Typography sx={{ color: "grey", fontSize: "9px" }}>
+          <Typography sx={{ color: "grey", fontSize: "9px",marginBottom:"10px" }}>
             First Name
           </Typography>
           <TextField
             fullWidth
-            placeholder="Enter your first name"
+            placeholder="Enter first name"
             size="small"
             sx={{
               height: 40,
@@ -125,12 +125,12 @@ const SignupComponent = () => {
 
         {/* Last Name */}
         <Box sx={{ flex: 1 }}>
-          <Typography sx={{ color: "grey", fontSize: "9px" }}>
+          <Typography sx={{ color: "grey", fontSize: "9px",marginBottom:"10px"  }}>
             Last Name
           </Typography>
           <TextField
             fullWidth
-            placeholder="Enter your last name"
+            placeholder="Enter last name"
             size="small"
             sx={{
               height: 40,
