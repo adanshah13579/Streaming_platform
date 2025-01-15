@@ -1,7 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
 import LoginLeftSide from "../../component/AuthenticationComponents/LoginLeftside";
-import SignupComponent from "../../component/AuthenticationComponents/Signup";
+import SignupComponent from "../../component/AuthenticationComponents/signup";
+
 
 const SignupPage = () => {
   const backgroundImageUrl =

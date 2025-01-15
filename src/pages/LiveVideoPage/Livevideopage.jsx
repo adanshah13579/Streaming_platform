@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import MainLayout from "../../layouts/Mainlayout";
 import colors from "../../style/color";
 import Livevideobox from "../../component/LiveVideoComponent/livevideocomponent";
-import ChatBox from "../../component/ChatBox/chatbox";
+import ChatBox from "../../component/LiveChatBox/chatbox";
 import LiveVideoProfile from "../../component/LiveVideoProfile/livevideoprofile";
 import Componentfour from "../../component/Livevideocomponent4/livevideocom4";
 import VideoPageCard from "../../component/VideoPageCard/videopageCard";
@@ -37,14 +37,15 @@ const LiveVideoPage = () => {
           {/* Component 1 */}
           <Box
             sx={{
-              backgroundColor: "lightblue",
-              flex: { xs: "0 1 100%", md: "0 1 60%" }, // Full width on xs and sm, 60% on md and above
-              height: "auto", // Ensuring height consistency across sizes
+              backgroundColor: colors.background,
+              flex: { xs: "1 1 100%", md: "1 1 50%" }, // Allow it to grow and shrink appropriately
+              height: "70%", // Let the content determine height
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               borderRadius: 2,
               boxShadow: 3,
+              minHeight: "500px",
             }}
           >
             <Livevideobox />
@@ -53,15 +54,16 @@ const LiveVideoPage = () => {
           {/* Component 2 */}
           <Box
             sx={{
-              backgroundColor: "lightgreen",
-              flex: { xs: "0 1 100%", md: "0 1 35%" }, // Full width on xs and sm, 35% on md and above
-              height: { xs: "350px", sm: "450px", md: "450px" },
-              height: "auto", // Ensuring height consistency across sizes
+              backgroundColor: colors.background,
+              flex: { xs: "1 1 100%", md: "1 1 30%" }, // Allow proportional growth/shrink
+              height: "auto", // Allow height to adjust dynamically
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               borderRadius: 2,
               boxShadow: 3,
+              minHeight: "400px", // Ensure a minimum height to avoid excessive shrinking
+              maxHeight: "700px",
             }}
           >
             <ChatBox />
@@ -71,15 +73,17 @@ const LiveVideoPage = () => {
         {/* Row 2: Component 3 */}
         <Box
           sx={{
-            backgroundColor: "lightcoral",
-            width: { xs: "100%", sm: "100%", md: "70%" },
+            backgroundColor: colors.background,
+            width: "100%", // Use full width initially
+            maxWidth: { md: "65%" }, // Restrict max width for medium screens and above
             height: "auto",
             display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "flex-start", // Align content to the start
+            justifyContent: "start",
             borderRadius: 2,
-
-            alignSelf: { md: "flex-start" },
+            padding: 2, // Add padding for better appearance
+            boxShadow: 3,
           }}
         >
           <LiveVideoProfile />
@@ -105,13 +109,22 @@ const LiveVideoPage = () => {
           sx={{
             height: "auto",
             display: "flex",
-            backgroundColor:"red",
-            justifyContent: { xs: "column", sm: "row", md: "start" }
-            
+            backgroundColor: colors.background,
+            justifyContent: {
+              xs: "center", // Center the component for extra-small screens
+              sm: "flex-start", // Align to the start for small screens and larger
+              md: "flex-start", // Ensures behavior for medium screens
+            },
+            alignItems: "start", // Align items at the top along the cross-axis
+            width: "100%", // Ensure the Box spans the full width of the container
+            padding: { xs: 2, sm: 3 },
+            boxSizing: "border-box",
+            margin: 0,
           }}
         >
           <ResponsiveUnderlineNav />
         </Box>
+
         <Box
           sx={{
             padding: "30px",
@@ -122,7 +135,7 @@ const LiveVideoPage = () => {
             gap: "15px",
             flexWrap: "wrap", // Allows wrapping to the next row
             justifyContent: { xs: "center", sm: "space-around", md: "start" }, // Center or spread components
-            alignItems: "center", // Align items to center vertically
+            alignItems: "center",
           }}
         >
           <VideoPageCard isBelowIcon={false} />

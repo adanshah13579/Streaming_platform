@@ -7,8 +7,8 @@ const Livevideobox = () => {
   sx={{
     backgroundColor: "black",
     color: "white",
-    width: { xs: "90%", sm: "80%", md: "80%px", lg: "80%" },
-    height: { xs: "100px", sm: "150px", md: "240px", lg: "300px" }, // Increased height
+    width: { xs: "90%", sm: "80%", md: "70%px", lg: "75%" },
+    height: { xs: "400px", sm: "250px", md: "380px", lg: "450px" }, // Increased height
     display: "flex",
     alignItems: "center",
     justifyContent: "center",

@@ -1,23 +1,30 @@
 import React, { useState } from "react";
 import { Box, Typography } from "@mui/material";
+import colors from "../../style/color";
 
 const ResponsiveUnderlineNav = () => {
-  const [activeTab, setActiveTab] = useState("Videos"); // Track the active tab
+  const [activeTab, setActiveTab] = useState("Videos"); 
 
   const tabs = ["Videos", "About", "Stories", "Schedule"];
 
   return (
     <Box
       sx={{
-        backgroundColor:"green",
+        backgroundColor: colors.background,
         display: "flex",
-        justifyContent: { xs: "space-evenly", sm: "center", },
-        alignItems: "start",
+        justifyContent: {
+          xs: "center", 
+          sm: "flex-start", 
+          md: "flex-start", 
+        },
+        alignItems: "center", 
         flexWrap: "wrap",
-        gap: { xs: 2, sm: 4 },
+        gap: { xs: 2, sm: 2 },
         padding: { xs: 2, sm: 3 },
-        borderBottom: "2px solid #ccc", // Underline navigation container
-        maxWidth:"60%",
+        borderBottom: "2px solid #ccc", 
+        maxWidth: { md: "70%", sm: "100%" }, 
+        width: "100%", 
+        margin: { xs: "0 auto", sm: "0" }, 
       }}
     >
       {tabs.map((tab) => (
@@ -27,18 +34,19 @@ const ResponsiveUnderlineNav = () => {
           sx={{
             fontSize: { xs: "14px", sm: "16px", md: "18px" },
             fontWeight: activeTab === tab ? "bold" : "normal",
-            color: activeTab === tab ? "blue" : "gray",
+            color: activeTab === tab ? "white" : "white",
             position: "relative",
             cursor: "pointer",
             "&:hover": {
-              color: "blue",
+              color: "white",
             },
             "&::after": {
               content: '""',
               position: "absolute",
               width: activeTab === tab ? "100%" : "0",
-              height: "2px",
-              backgroundColor: "blue",
+              borderRadius:"2px",
+              height: "4px",
+              backgroundColor: "#3F8CFF",
               bottom: "-5px",
               left: 0,
               transition: "width 0.3s ease",
