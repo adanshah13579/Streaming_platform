@@ -22,9 +22,7 @@ const ResponsiveUnderlineNav = () => {
         gap: { xs: 2, sm: 2 },
         padding: { xs: 2, sm: 3 },
         borderBottom: "2px solid #ccc", 
-        maxWidth: { md: "70%", sm: "100%" }, 
-        width: "100%", 
-        margin: { xs: "0 auto", sm: "0" }, 
+        maxWidth:"60%",
       }}
     >
       {tabs.map((tab) => (
