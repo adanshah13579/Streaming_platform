@@ -35,7 +35,7 @@ const FollowingPage = () => {
         sx={{
           display: "flex", // Use flexbox layout
           flexDirection: "row", // Align items in a row
-          flexWrap: "wrap", // Allow items to wrap onto new lines on smaller screens
+          flexWrap: "wrap", 
           gap: "10px", // Space between cards
           justifyContent: { xs: "center", sm: "start", lg: "start" }, // Align cards to the left
           width: "100%",

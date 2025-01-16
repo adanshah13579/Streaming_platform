@@ -21,7 +21,7 @@ const ResponsiveUnderlineNav = () => {
         flexWrap: "wrap",
         gap: { xs: 2, sm: 2 },
         padding: { xs: 2, sm: 3 },
-        borderBottom: "2px solid #ccc", 
+         
         maxWidth:"60%",
       }}
     >

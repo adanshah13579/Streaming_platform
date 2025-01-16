@@ -1,53 +1,53 @@
-import React from 'react';
-import { Box, Divider, Typography } from '@mui/material';
-import EmojiEventsIcon from '@mui/icons-material/EmojiEvents'; // Trophy Icon
-import BadgeCard from './AchievementBadgescCard';
-import colors from '../../style/color';
+import React from "react";
+import { Box, Button, Typography, Avatar } from "@mui/material";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import PersonAddIcon from "@mui/icons-material/PersonAdd";
 
-export default function AchievementsBadges() {
-  // Data for achievements and badges
-  const achievements = [...Array(5)].map((_, index) => `Achievement ${index + 1}`);
-  const badges = [...Array(5)].map((_, index) => `Badge ${index + 1}`);
-
+const ChannelProfileComponent = () => {
   return (
-    <Box sx={{ width: "100%", backgroundColor: colors.background, p: 3, borderRadius: "10px" }}>
-
-      {/* Title with Divider in front */}
-      <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-        
-        <Typography variant="h6" sx={{ color: "white", fontFamily:"poppins" }}>
-          MY ACHIEVEMENTS & BADGES
-        </Typography>
-        <Divider sx={{ flex: 1, bgcolor: "#fff", height: "2px", ml: 2 }} />
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: 3,
+        backgroundColor: "#18181B",
+        borderRadius: 2,
+        maxWidth: 1200,
+        height: 180,
+        margin: "auto",
+      }}
+    >
+      {/* Avatar and Name Section */}
+      <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Avatar
+          src="/path-to-avatar-image.jpg"
+          alt="The Pebble"
+          sx={{ width: 90, height: 90 }}
+        />
+        <Box>
+          <Typography variant="h5" color="white" display="flex" alignItems="center">
+            The Pebble
+            <CheckCircleIcon sx={{ color: "#4CAF50", ml: 1, fontSize: 24 }} />
+          </Typography>
+          <Typography variant="body1" color="gray">
+            536K followers • 120 videos
+          </Typography>
+        </Box>
       </Box>
 
-      {/* Achievements Section */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap" }}>
-        {[...Array(5)].map((_, index) => (
-          <Box key={`achievement-${index}`} sx={achievementBoxStyle}>
-            <EmojiEventsIcon sx={{ color: "#FFC107", fontSize: 30 }} />
-            <Typography sx={{ color: "#FFC107", mt: 1 }}>Achievement {index + 1}</Typography>
-          </Box>
-        ))}
-      </Box>
-
-      {/* Badges Section */}
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 2, flexWrap: "wrap", mt: 4 }}>
-        {badges.map((badge, index) => (
-          <BadgeCard key={`badge-${index}`} badge={badge} />
-        ))}
+      {/* Buttons Section */}
+      <Box sx={{ display: "flex", gap: 6, ml: "auto" }}>
+        <Button variant="contained" color="primary" sx={{ textTransform: "none", fontSize: 14, padding: "8px 18px" }}>
+          Support this Creator
+        </Button>
+        <Button variant="outlined" color="secondary" sx={{ padding: "8px 18px" }}>
+          <PersonAddIcon fontSize="medium" />
+        </Button>
       </Box>
     </Box>
   );
-}
-
-// Styles for Achievements Section
-const achievementBoxStyle = {
-  bgcolor: "#1E1E2F",
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  p: 2,
-  borderRadius: "8px",
 };
+
+export default ChannelProfileComponent;

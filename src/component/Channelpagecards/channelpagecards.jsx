@@ -33,7 +33,7 @@ export default function ChannelPageCardGrid() {
         <Box sx={{ display: "flex", justifyContent: "center", mt: 3, width: "100%" }}>
           <Button 
             variant="contained" 
-            sx={{ bgcolor: "#E4E4E41A", color: "#fff", borderRadius: "10px", p: 2}}
+            sx={{ bgcolor: "#E4E4E41A", color: "#fff", borderRadius: "10px", p: 1,}}
             onClick={handleLoadMore}
           >
             Load More

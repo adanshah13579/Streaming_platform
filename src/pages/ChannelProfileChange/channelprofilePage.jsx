@@ -16,12 +16,7 @@ const ChannelProfilePage = () => {
     <MainLayout>
       <Box
         sx={{
-          width: "100%", // Full width of the page
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-          alignItems: "center",
-          gap: 2,
+          width: "100%",
         }}
       >
         {/* Full-width Box for Channelherosection */}
@@ -34,35 +29,45 @@ const ChannelProfilePage = () => {
         </Box>
 
         {/* Other components */}
-        <Box sx={{ width: "100%",backgroundColor:colors.background,display: "flex",
-          
-          justifyContent: "flex-start", }}>
-          <Channelprofilecomponent/>
+        <Box
+          sx={{
+            width: "100%",
+            backgroundColor: colors.background,
+            display: "flex",
+
+            justifyContent: "flex-start",
+          }}
+        >
+          <Channelprofilecomponent />
         </Box>
         <Box
-  sx={{
-    width: "100%",
-    display: "flex",
-    justifyContent: "flex-start",
-     
-    backgroundColor: colors.background,
-    padding: "0 20px", 
-  }}
->
-  <ResponsiveUnderlineNav />
-</Box>
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "start",
 
-        <Box sx={{ width: "100%",
-     
-     backgroundColor: colors.background, }}>
-        <ThreeVideoButton  isChannelProfilePage={true}/>
+            backgroundColor: colors.background,
+            padding: "0 20px",
+            padding: "0px 40px",
+          }}
+        >
+          <ResponsiveUnderlineNav />
         </Box>
-        <Box sx={{ width: "100%", backgroundColor: colors.background, }}>
-        <ChannelPageCardGrid/>
 
+        <Box
+          sx={{
+            width: "100%",
+            backgroundColor: colors.background,
+             padding:"0px 35px"
+          }}
+        >
+          <ThreeVideoButton isChannelProfilePage={true} />
         </Box>
-        <Box sx={{ width: "100%", backgroundColor: colors.background, }}>
-          <AchievementsBadges/>
+        <Box sx={{ width: "100%", backgroundColor: colors.background , padding:"0px 40px"}}>
+          <ChannelPageCardGrid />
+        </Box>
+        <Box sx={{ width: "100%", backgroundColor: colors.background, padding:"0px 40px" }}>
+          <AchievementsBadges />
         </Box>
       </Box>
     </MainLayout>

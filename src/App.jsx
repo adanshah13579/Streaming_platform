@@ -18,6 +18,7 @@ import PublicDarePage from "./pages/PublicDarePage/publicdareindex";
 import LiveVideoPage from "./pages/LiveVideoPage/Livevideopage";
 import Normalvideopage from "./pages/NormalVideoPage/normalvideo";
 import ChannelProfilePage from "./pages/ChannelProfileChange/channelprofilePage";
+import ChatsystemPage from "./pages/ChatSystemPage/Chatsystempage";
 
 const App = () => {
   return (
@@ -30,7 +31,9 @@ const App = () => {
         <Route path="/publicdare" element={<PublicDarePage />}></Route>
         <Route path="/livevideo" element={<LiveVideoPage/>}></Route>
         <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
-        <Route path="/" element={<ChannelProfilePage/>}></Route>
+        <Route path="/channelprofile" element={<ChannelProfilePage/>}></Route>
+        <Route path="/" element={<ChatsystemPage/>}></Route>
+
 
 
       </Routes>

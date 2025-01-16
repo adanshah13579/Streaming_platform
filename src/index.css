@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 /* Ensure html and body take full height and width */
@@ -11,8 +12,11 @@ html, body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal scrolling */
   overflow-y: scroll; /* Allow vertical scrolling */
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scrollbar-width: none;
+   /* Hide scrollbar in Firefox */
 }
+
+
 
 /* Ensure #root fills the viewport */
 #root {
