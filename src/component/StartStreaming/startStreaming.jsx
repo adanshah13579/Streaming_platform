@@ -45,9 +45,9 @@ const StreamingScreen = () => {
           justifyContent: 'center',
           alignItems: 'center',
           background: '#6262621A',
-         backdropFilter: "blur(125.19999694824219px)",
+         
           borderRadius: '16px',
-          boxShadow: '0 4px 30px rgba(0, 0, 0, 0.5)',
+          
           padding: '16px',
           color: '#fff',
           textAlign: 'center',

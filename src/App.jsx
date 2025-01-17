@@ -24,11 +24,13 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/homepage" element={<HomePage />}></Route>
+        <Route path="/h" element={<HomePage />}></Route>
         <Route path="/following" element={<FollowingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>
         <Route path="/publicdare" element={<PublicDarePage />}></Route>
+        <Route path="/startstreaming" element={<StartStreaming />}></Route>
+
         <Route path="/livevideo" element={<LiveVideoPage/>}></Route>
         <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
         <Route path="/channelprofile" element={<ChannelProfilePage/>}></Route>

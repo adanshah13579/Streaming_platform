@@ -66,13 +66,13 @@ const MainLayout = ({ children }) => {
 
   const listItemss = [
     { text: "Live Dares", icon: <LiveTvIcon />, onPress: () => navigate("/") },
-    { text: "Popular Dares", icon: <StarIcon /> },
+    { text: "Popular Dares", icon: <StarIcon />, onPress: () => navigate("/publicdare") },
     {
       text: "Following",
       icon: <PeopleIcon />,
       onPress: () => navigate("/following"),
     },
-    { text: "Start Streaming", icon: <CastIcon /> },
+    { text: "Start Streaming", icon: <CastIcon />, onPress: () => navigate("/startstreaming")  },
     { text: "Save Clips", icon: <SaveIcon /> },
     { name: "John Doe", avatar: "/path-to-avatar-1.jpg", icon: <WifiIcon /> },
     {

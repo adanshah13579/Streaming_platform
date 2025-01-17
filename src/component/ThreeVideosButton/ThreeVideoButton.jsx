@@ -9,7 +9,7 @@ const ThreeVideoButton = ({ isChannelProfilePage }) => {
     <Box
       sx={{
         display: 'flex',
-        flexDirection: { xs: 'row', sm: 'row', md: 'row' }, // Stack buttons on small screens, row on large screens
+        flexDirection: { xs: 'column', sm: 'column', md: 'row' }, // Stack buttons on small screens, row on large screens
         justifyContent: 'start',
         gap: '16px',
         width: '100%',
@@ -25,13 +25,13 @@ const ThreeVideoButton = ({ isChannelProfilePage }) => {
           '&:hover': {
             backgroundColor: '#6C5DD3', // Light purple on hover, same as active
           },
-          fontSize: { xs: '5px', sm: '7px', md: '8px', lg: '10px' },
+          fontSize: { xs: '10px', sm: '10px', md: '12px', lg: '12px' },
           padding: '10px 15px',
           borderRadius: '8px',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)', // Slight shadow for glass effect
           backdropFilter: 'blur(5px)', // Glass effect blur
           minHeight: '48px', // Fixed height to ensure all buttons are the same size
-          width: '15%', // Ensure the button takes full width
+          width: '25%', // Ensure the button takes full width
         }}
         onClick={() => setActiveButton('all')} // Set "All" as active
       >
@@ -46,13 +46,12 @@ const ThreeVideoButton = ({ isChannelProfilePage }) => {
           '&:hover': {
             backgroundColor: '#6C5DD3', // Light purple on hover, same as active
           },
-          fontSize: { xs: '5px', sm: '7px', md: '8px', lg: '10px' },
-          padding: '10px 20px',
+          fontSize: { xs: '10px', sm: '10px', md: '12px', lg: '12px' },          padding: '10px 20px',
           borderRadius: '8px',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)', // Slight shadow for glass effect
           backdropFilter: 'blur(5px)', // Glass effect blur
           minHeight: '48px', // Fixed height to ensure all buttons are the same size
-          width: '15%', // Ensure the button takes full width
+          width: '25%', // Ensure the button takes full width
         }}
         onClick={() => setActiveButton('videos')} // Set "Videos" as active
       >
@@ -67,13 +66,12 @@ const ThreeVideoButton = ({ isChannelProfilePage }) => {
           '&:hover': {
             backgroundColor: '#6C5DD3', // Light purple on hover, same as active
           },
-          fontSize: { xs: '5px', sm: '7px', md: '8px', lg: '10px' },
-          padding: '10px 20px',
+          fontSize: { xs: '10px', sm: '10px', md: '12px', lg: '12px' },          padding: '10px 20px',
           borderRadius: '8px',
           boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)', // Slight shadow for glass effect
           backdropFilter: 'blur(5px)', // Glass effect blur
           minHeight: '48px', // Fixed height to ensure all buttons are the same size
-          width: '15%', // Ensure the button takes full width
+          width: '25%', // Ensure the button takes full width
         }}
         onClick={() => setActiveButton('placeholder')} // Set "Placeholder" as active
       >

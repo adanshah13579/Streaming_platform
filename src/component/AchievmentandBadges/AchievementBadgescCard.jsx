@@ -11,7 +11,6 @@ const BadgeCard = ({ badge }) => {
   );
 };
 
-// Styles for BadgeCard
 const badgeBoxStyle = {
   bgcolor: "#1E1E2F",
   display: "flex",

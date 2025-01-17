@@ -13,16 +13,17 @@ const ResponsiveUnderlineNav = () => {
         backgroundColor: colors.background,
         display: "flex",
         justifyContent: {
-          xs: "center", 
+          xs: "start", 
           sm: "flex-start", 
           md: "flex-start", 
         },
+        width:{xs:"100%"},
         alignItems: "center", 
         flexWrap: "wrap",
         gap: { xs: 2, sm: 2 },
         padding: { xs: 2, sm: 3 },
          
-        maxWidth:"60%",
+        
       }}
     >
       {tabs.map((tab) => (
@@ -30,7 +31,7 @@ const ResponsiveUnderlineNav = () => {
           key={tab}
           onClick={() => setActiveTab(tab)}
           sx={{
-            fontSize: { xs: "14px", sm: "16px", md: "18px" },
+            fontSize: { xs: "11px", sm: "16px", md: "18px" },
             fontWeight: activeTab === tab ? "bold" : "normal",
             color: activeTab === tab ? "white" : "white",
             position: "relative",

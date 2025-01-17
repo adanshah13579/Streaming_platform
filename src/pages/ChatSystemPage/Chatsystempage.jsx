@@ -1,15 +1,59 @@
-import ChatComponent from "../../component/Chatpage/chatpage";
-import ChatScreen from "../../component/Chatpage/chatpage";
 import MainLayout from "../../layouts/Mainlayout";
+import { Box } from "@mui/material";
+import colors from "../../style/color";
+import ChatDrawer from "../../component/Chatboxx/leftchatdrawer";
+
+import { useState } from "react";
+import Chatbox from "../../component/ChatTextbox/chatbox";
 
 const ChatsystemPage = () => {
-  return (
-    <>
-      <MainLayout>
+  const [chatOpen,setChatOpen] = useState(false);
 
-        <ChatComponent />
-      </MainLayout>
-    </>
+  return (
+    <MainLayout>
+      <Box
+        sx={{
+          display: "flex",
+          width: "100%",
+          height: "auto",
+          flexDirection: {
+            xs: "column", // Stack vertically on small screens
+            sm: "row",    // Row layout on small and above screens
+          },
+        }}
+      >
+        {/* Left-side Chat Drawer */}
+        <Box
+          sx={{
+            flex: 1,
+            minWidth: "350px",
+            backgroundColor: colors.background,
+            p: 2,
+            display: {
+              xs: chatOpen?"none":"",  // Hide the chat drawer on extra small screens
+              sm: "block", 
+            },
+          }}
+        >
+          <ChatDrawer setChatState= {()=>setChatOpen(!chatOpen)} />
+        </Box>
+
+        
+        <Box
+          sx={{
+            flex: 3,
+            display: "flex",
+            flexDirection: "column",
+            height: "auto",
+            width: "100%",
+            backgroundColor: colors.background,
+            p: 2,
+          }}
+        >
+          <Chatbox  setChatState= {()=>setChatOpen(!chatOpen)} />
+        </Box>
+      </Box>
+    </MainLayout>
   );
 };
 

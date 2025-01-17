@@ -19,23 +19,24 @@ const ChannelProfilePage = () => {
           width: "100%",
         }}
       >
-        {/* Full-width Box for Channelherosection */}
         <Box
           sx={{
-            width: "100%", // Ensure it takes up the full width
+            width: "100%", 
           }}
         >
           <Channelherosection />
         </Box>
 
-        {/* Other components */}
         <Box
           sx={{
             width: "100%",
             backgroundColor: colors.background,
             display: "flex",
-
+            zIndex:100,
+          
             justifyContent: "flex-start",
+           
+            
           }}
         >
           <Channelprofilecomponent />
@@ -45,9 +46,10 @@ const ChannelProfilePage = () => {
             width: "100%",
             display: "flex",
             justifyContent: "start",
+            flexDirection:"column",
 
             backgroundColor: colors.background,
-            padding: "0 20px",
+            
             padding: "0px 40px",
           }}
         >
@@ -63,10 +65,10 @@ const ChannelProfilePage = () => {
         >
           <ThreeVideoButton isChannelProfilePage={true} />
         </Box>
-        <Box sx={{ width: "100%", backgroundColor: colors.background , padding:"0px 40px"}}>
+        <Box sx={{ width: "100%", backgroundColor: colors.background , padding:"10px 40px"}}>
           <ChannelPageCardGrid />
         </Box>
-        <Box sx={{ width: "100%", backgroundColor: colors.background, padding:"0px 40px" }}>
+        <Box sx={{ width: "100%", backgroundColor: colors.background, padding:"0px 30px" }}>
           <AchievementsBadges />
         </Box>
       </Box>
