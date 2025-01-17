@@ -16,6 +16,8 @@ const Commentbox = () => {
         backgroundColor:"#E4E4E4",
         display: "flex",
         flexDirection: "column",
+        backgroundColor:colors.greycardcolor,
+        
       }}
     >
       {/* Icons Row */}

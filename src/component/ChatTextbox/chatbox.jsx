@@ -31,46 +31,7 @@ const Chatbox = ({setChatState}) => {
         "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
       isHighlighted: true,
     },
-    {
-        avatar: "https://example.com/avatar2.jpg",
-        name: "John Doe",
-        time: " 🔥 2m ago",
-        message:
-          "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
-        isHighlighted: true,
-      },
-      {
-        avatar: "https://example.com/avatar2.jpg",
-        name: "John Doe",
-        time: " 🔥 2m ago",
-        message:
-          "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
-        isHighlighted: true,
-      },
-      {
-        avatar: "https://example.com/avatar2.jpg",
-        name: "John Doe",
-        time: " 🔥 2m ago",
-        message:
-          "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
-        isHighlighted: true,
-      },
-      {
-        avatar: "https://example.com/avatar2.jpg",
-        name: "John Doe",
-        time: " 🔥 2m ago",
-        message:
-          "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
-        isHighlighted: true,
-      },
-      {
-        avatar: "https://example.com/avatar2.jpg",
-        name: "John Doe",
-        time: " 🔥 2m ago",
-        message:
-          "I'm doing great! Thanks for  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to g  lkjdsbf jdbvjds syed adn sj ikduy  iwant to gasking.",
-        isHighlighted: true,
-      },
+
 ]
   
   return (
@@ -141,7 +102,7 @@ const Chatbox = ({setChatState}) => {
         ))}
       </Box>
 
-      <Box><Commentbox/></Box>
+      {/* <Box><Commentbox/></Box> */}
     </Box>
   );
 };

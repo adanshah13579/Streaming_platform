@@ -24,7 +24,7 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/h" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/following" element={<FollowingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>
@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/livevideo" element={<LiveVideoPage/>}></Route>
         <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
         <Route path="/channelprofile" element={<ChannelProfilePage/>}></Route>
-        <Route path="/" element={<ChatsystemPage/>}></Route>
+        <Route path="/chatpage" element={<ChatsystemPage/>}></Route>
 
 
 

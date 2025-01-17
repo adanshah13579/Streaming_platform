@@ -17,8 +17,8 @@ const ChatsystemPage = () => {
           width: "100%",
           height: "auto",
           flexDirection: {
-            xs: "column", // Stack vertically on small screens
-            sm: "row",    // Row layout on small and above screens
+            xs: "column", 
+            sm: "row",    
           },
         }}
       >
