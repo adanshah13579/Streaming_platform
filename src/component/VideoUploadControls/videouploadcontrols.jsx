@@ -37,34 +37,31 @@ const VideoUploadControls = () => {
     <Box
       sx={{
         width: "100%",
-        padding: { xs: "16px", sm: "32px" },
+        padding: { xs: "16px", sm: "24px", md: "32px" }, // Adjust padding for responsive design
       }}
     >
       {/* Heading in the top left corner */}
       <Typography
         sx={{
-          fontSize: { xs: "10px", sm: "16px" },
+          fontSize: { xs: "10px", sm: "14px", md: "16px" }, // Adjust font size for responsiveness
           fontFamily: "Poppins",
           color: "white", // Dark color for the heading
-          marginBottom: "16px", // Space between heading and content
+          marginBottom: "16px",
         }}
       >
         You uploaded 16 videos
       </Typography>
 
-      {/* Flex row layout for controls */}
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row", // Ensure all items are in one line
+          flexDirection: { xs: "column", sm: "row" }, // Stack on smaller screens, row on larger screens
           alignItems: "center",
-          gap: "16px", // Space between items
+          gap: { xs: "8px", sm: "16px" }, // Adjust space between items
         }}
       >
-        {/* Checkbox */}
         <Checkbox sx={{ color: "#242731" }} />
 
-        {/* Category Button with Down Arrow */}
         <Button
           sx={{
             backgroundColor: "#242731", // Use the specified color
@@ -72,11 +69,13 @@ const VideoUploadControls = () => {
             "&:hover": {
               backgroundColor: "#242731", // Keep the same color on hover
             },
-            fontSize: { xs: "8px", sm: "10px" },
+            fontSize: { xs: "8px", sm: "10px", md: "12px" }, // Adjust font size for responsiveness
             padding: "8px 16px",
             borderRadius: "8px",
             boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", // Slight shadow for glass effect
             backdropFilter: "blur(5px)", // Glass effect blur
+            minHeight: "40px", // Set a consistent height
+            width: { xs: "100%", sm: "auto" }, // Full width on small screens, auto on larger screens
             display: "flex",
             alignItems: "center", // Align text and icon
             gap: "8px",
@@ -84,19 +83,16 @@ const VideoUploadControls = () => {
           onClick={handleCategoryClick}
         >
           {selectedCategory || "Select Category"}{" "}
-          {/* Show selected category or default text */}
           <ArrowDropDown /> {/* Down arrow icon */}
         </Button>
 
-        {/* Spacer to push buttons to the right */}
         <Box sx={{ flexGrow: 1 }} />
 
-        {/* Flex-end buttons (Move, Delete, Add to Playlist) */}
         <Box
           sx={{
             display: "flex",
             justifyContent: "flex-end", // Align buttons to the end
-            gap: "16px", // Space between the buttons
+            gap: { xs: "8px", sm: "16px" }, // Adjust space between buttons
             alignItems: "center", // Align items vertically
           }}
         >
@@ -107,7 +103,7 @@ const VideoUploadControls = () => {
               "&:hover": {
                 backgroundColor: "#6C5DD3", // Keep the same color on hover
               },
-              fontSize: { xs: "8px", sm: "10px" },
+              fontSize: { xs: "8px", sm: "10px", md: "12px" }, // Adjust font size for responsiveness
               padding: "8px 16px",
               borderRadius: "8px",
               boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", // Slight shadow for glass effect
@@ -116,13 +112,9 @@ const VideoUploadControls = () => {
           >
             <JoinFullOutlined
               sx={{
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "14px",
-                  marginRight: "3px",
-                }, // Icon font size with responsiveness
+                fontSize: { xs: "8px", sm: "10px", md: "14px" }, // Icon font size with responsiveness
                 color: "inherit", // Ensure the icon inherits the color of the button
+                marginRight: "3px",
               }}
             />
             Move
@@ -135,7 +127,7 @@ const VideoUploadControls = () => {
               "&:hover": {
                 backgroundColor: "#6C5DD3", // Keep the same color on hover
               },
-              fontSize: { xs: "8px", sm: "10px" },
+              fontSize: { xs: "8px", sm: "10px", md: "12px" }, // Adjust font size for responsiveness
               padding: "8px 16px",
               borderRadius: "8px",
               boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", // Slight shadow for glass effect
@@ -144,13 +136,9 @@ const VideoUploadControls = () => {
           >
             <JoinFullOutlined
               sx={{
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "14px",
-                  marginRight: "3px",
-                }, // Icon font size with responsiveness
+                fontSize: { xs: "8px", sm: "10px", md: "14px" }, // Icon font size with responsiveness
                 color: "inherit", // Ensure the icon inherits the color of the button
+                marginRight: "3px",
               }}
             />
             Delete
@@ -163,7 +151,7 @@ const VideoUploadControls = () => {
               "&:hover": {
                 backgroundColor: "#6C5DD3", // Keep the same color on hover
               },
-              fontSize: { xs: "8px", sm: "10px" },
+              fontSize: { xs: "8px", sm: "10px", md: "12px" }, // Adjust font size for responsiveness
               padding: "8px 16px",
               borderRadius: "8px",
               boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)", // Slight shadow for glass effect
@@ -172,13 +160,9 @@ const VideoUploadControls = () => {
           >
             <JoinFullOutlined
               sx={{
-                fontSize: {
-                  xs: "8px",
-                  sm: "10px",
-                  md: "14px",
-                  marginRight: "3px",
-                }, // Icon font size with responsiveness
+                fontSize: { xs: "8px", sm: "10px", md: "14px" }, // Icon font size with responsiveness
                 color: "inherit", // Ensure the icon inherits the color of the button
+                marginRight: "3px",
               }}
             />
             Add to Playlist
@@ -188,7 +172,7 @@ const VideoUploadControls = () => {
           <Box
             sx={{
               display: "flex",
-              gap: "16px", // Space between icons
+              gap: { xs: "8px", sm: "16px" }, // Adjust space between icons
               justifyContent: "flex-end", // Align to the right
               alignItems: "center", // Align icons vertically
             }}
@@ -197,7 +181,7 @@ const VideoUploadControls = () => {
             <DashboardOutlined
               sx={{
                 color: "white",
-                fontSize: "35px",
+                fontSize: { xs: "24px", sm: "30px", md: "35px" }, // Adjust icon size for responsiveness
                 backgroundColor: "#3F8CFF",
                 borderRadius: "10%", // Circular border radius
                 padding: "8px",

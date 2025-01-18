@@ -30,11 +30,13 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />}></Route>
         <Route path="/publicdare" element={<PublicDarePage />}></Route>
         <Route path="/startstreaming" element={<StartStreaming />}></Route>
+        <Route path="/MyVideoPage" element={<MyVideosPage/>}></Route>
 
         <Route path="/livevideo" element={<LiveVideoPage/>}></Route>
         <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
-        <Route path="/channelprofile" element={<ChannelProfilePage/>}></Route>
-        <Route path="/chatpage" element={<ChatsystemPage/>}></Route>
+        <Route path="/channel_profile" element={<ChannelProfilePage/>}></Route>
+        <Route path="/chatsystem" element={<ChatsystemPage/>}></Route>
+        
 
 
 

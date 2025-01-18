@@ -93,27 +93,57 @@ const UploadComponent = () => {
     <ThreeVideoButton/>
   
     <VideoUploadControls/>
-    <Box sx={{padding:'30px',flexDirection:'row',display:'flex',gap:'15px'}}>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
+    <Box
+  sx={{
+    padding: '30px',
+    display: 'flex',
+    flexDirection: { xs: 'column', sm: 'row' }, // Column for xs and sm, row for larger screens
+    gap: '15px',
+    flexWrap: 'wrap', // Allow items to wrap to the next line
+    justifyContent: { xs: 'center', sm: 'flex-start' }, // Center for small screens, left-aligned for larger screens
+    alignItems: { xs: 'center', sm: 'flex-start' }, // Center vertically for small screens, top-aligned for larger screens
+  }}
+>
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+</Box>
 
-    </Box>
-    <Box sx={{padding:'30px',flexDirection:'row',display:'flex',gap:'15px'}}>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
+<Box
+  sx={{
+    padding: '30px',
+    display: 'flex',
+    flexDirection: { xs: 'column', sm: 'row' }, // Column for xs and sm, row for larger screens
+    gap: '15px',
+    flexWrap: 'wrap', // Allow items to wrap to the next line
+    justifyContent: { xs: 'center', sm: 'flex-start' }, // Center for small screens, left-aligned for larger screens
+    alignItems: { xs: 'center', sm: 'flex-start' }, // Center vertically for small screens, top-aligned for larger screens
+  }}
+>
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+</Box>
 
-    </Box>
-    <Box sx={{padding:'30px',flexDirection:'row',display:'flex',gap:'15px'}}>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
-    <VideoPageCard/>
+<Box
+  sx={{
+    padding: '30px',
+    display: 'flex',
+    flexDirection: { xs: 'column', sm: 'row' }, // Column for xs and sm, row for larger screens
+    gap: '15px',
+    flexWrap: 'wrap', // Allow items to wrap to the next line
+    justifyContent: { xs: 'center', sm: 'flex-start' }, // Center for small screens, left-aligned for larger screens
+    alignItems: { xs: 'center', sm: 'flex-start' }, // Center vertically for small screens, top-aligned for larger screens
+  }}
+>
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+  <VideoPageCard />
+</Box>
 
-    </Box>
     </>
   );
 };

@@ -3,28 +3,10 @@ import { Box, List, ListItem, ListItemAvatar, ListItemText, Typography, IconButt
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore"; 
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import colors from "../../style/color";
+import { chatList, groupChats, moreChats, moreGroupChats } from "../../data/dummydata";
 
 const dummyAvatar = "https://example.com/dummy-avatar.jpg"; 
 
-const chatList = [
-  { avatar: "https://example.com/avatar1.jpg", groupAvatar: "https://example.com/group1.jpg", name: "Adan Shah", time: "🔥 3m ago" },
-  { avatar: "https://example.com/avatar2.jpg", groupAvatar: "https://example.com/group2.jpg", name: "John Doe", time: "🔥 2m ago" },
-];
-
-const moreChats = [
-  { avatar: "https://example.com/avatar3.jpg", groupAvatar: "https://example.com/group3.jpg", name: "Jane Doe", time: "🔥 5m ago" },
-  { avatar: "https://example.com/avatar4.jpg", groupAvatar: "https://example.com/group4.jpg", name: "Alice Brown", time: "🔥 10m ago" },
-];
-
-const groupChats = [
-  { avatar: "https://example.com/avatar5.jpg", groupAvatar: "https://example.com/group5.jpg", name: "Developers Hub", time: "🔥 Active now" },
-  { avatar: "https://example.com/avatar6.jpg", groupAvatar: "https://example.com/group6.jpg", name: "React Community", time: "🔥 1h ago" },
-];
-
-const moreGroupChats = [
-  { avatar: "https://example.com/avatar7.jpg", groupAvatar: "https://example.com/group7.jpg", name: "UI/UX Designers", time: "🔥 30m ago" },
-  { avatar: "https://example.com/avatar8.jpg", groupAvatar: "https://example.com/group8.jpg", name: "Tech Enthusiasts", time: "🔥 2h ago" },
-];
 
 const ChatDrawer = ({setChatState}) => {
     const [expandDirect, setExpandDirect] = useState(false);
@@ -38,7 +20,7 @@ const ChatDrawer = ({setChatState}) => {
             xs: "100%", // Full width on small screens
             sm: 320, // Fixed width for larger screens
           },
-          height: "90vh",
+          height: "92vh",
           borderRadius: "10px",
           backgroundColor: "#1A1F3D",
           color: "white",

@@ -25,7 +25,7 @@ import CastIcon from "@mui/icons-material/Cast";
 import SaveIcon from "@mui/icons-material/Save";
 import MenuIcon from "@mui/icons-material/Menu";
 import WifiIcon from "@mui/icons-material/Wifi";
-import SegmentIcon from '@mui/icons-material/Segment';
+import SegmentIcon from "@mui/icons-material/Segment";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -37,7 +37,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import BrowseCategoryIcon from "@mui/icons-material/Category"; // Add the icon for categories
-import { Explore, ExploreOutlined } from "@mui/icons-material";
+import { ExploreOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 
 const drawerWidth = 260;
@@ -47,7 +47,28 @@ const MainLayout = ({ children }) => {
   const [newFeedsItemsToShow, setNewFeedsItemsToShow] = useState(4); // Initially show 4 items in new feeds
   const [followingItemsToShow, setFollowingItemsToShow] = useState(4); // Initially show 4 items in following
   const [showMoreFollowing, setShowMoreFollowing] = useState(true); // Flag to toggle Load More button visibility for following
-  const [showLessFollowing, setShowLessFollowing] = useState(false); // Flag to toggle Show Less button visibility for following
+  const [showLessFollowing, setShowLessFollowing] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null);
+
+  const handleAvatarClick = (event) => {
+    setAnchorEl(event.currentTarget); // Opens the menu when avatar is clicked
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null); // Closes the menu
+  };
+
+  const handleLogout = () => {
+    // Perform logout actions here (e.g., clear session, local storage, etc.)
+    navigate("/login"); // Redirect to the login page after logout
+    handleMenuClose(); // Close the menu after logout
+  };
+
+  const handleDrawerToggle = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
+  // Flag to toggle Show Less button visibility for following
   const navigate = useNavigate();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -55,24 +76,37 @@ const MainLayout = ({ children }) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const [anchorEl, setAnchorEl] = useState(null); // For the categories menu
-
-  const handleMenuClose = () => {
-    setAnchorEl(null);
+  const handleLoadMoreFollowing = () => {
+    const newItemsToShow = followingItemsToShow + 4;
+    setFollowingItemsToShow(newItemsToShow);
+    if (newItemsToShow >= listItems.length) setShowMoreFollowing(false);
+    setShowLessFollowing(true);
   };
-  const handleDrawerToggle = () => {
-    setOpen(!open);
+
+  const handleShowLessFollowing = () => {
+    const newItemsToShow = followingItemsToShow - 4;
+    setFollowingItemsToShow(newItemsToShow);
+    if (newItemsToShow < listItems.length) setShowMoreFollowing(true);
+    if (newItemsToShow <= 4) setShowLessFollowing(false);
   };
 
   const listItemss = [
     { text: "Live Dares", icon: <LiveTvIcon />, onPress: () => navigate("/") },
-    { text: "Popular Dares", icon: <StarIcon />, onPress: () => navigate("/publicdare") },
+    {
+      text: "Popular Dares",
+      icon: <StarIcon />,
+      onPress: () => navigate("/publicdare"),
+    },
     {
       text: "Following",
       icon: <PeopleIcon />,
       onPress: () => navigate("/following"),
     },
-    { text: "Start Streaming", icon: <CastIcon />, onPress: () => navigate("/startstreaming")  },
+    {
+      text: "Start Streaming",
+      icon: <CastIcon />,
+      onPress: () => navigate("/startstreaming"),
+    },
     { text: "Save Clips", icon: <SaveIcon /> },
     { name: "John Doe", avatar: "/path-to-avatar-1.jpg", icon: <WifiIcon /> },
     {
@@ -89,7 +123,9 @@ const MainLayout = ({ children }) => {
     {
       name: "Jane Smith",
       avatar: "/path-to-avatar-2.jpg",
-      icon: <FiberManualRecordIcon  sx={{fontSize:"20px", paddingRight:"5px"}}/>,
+      icon: (
+        <FiberManualRecordIcon sx={{ fontSize: "20px", paddingRight: "5px" }} />
+      ),
     },
     {
       name: "Alice Brown",
@@ -99,7 +135,9 @@ const MainLayout = ({ children }) => {
     {
       name: "Bob Johnson",
       avatar: "/path-to-avatar-4.jpg",
-      icon: <FiberManualRecordIcon sx={{fontSize:"20px", paddingRight:"5px"}} />,
+      icon: (
+        <FiberManualRecordIcon sx={{ fontSize: "20px", paddingRight: "5px" }} />
+      ),
     },
     {
       name: "Charlie White",
@@ -109,38 +147,28 @@ const MainLayout = ({ children }) => {
     {
       name: "Dave Wilson",
       avatar: "/path-to-avatar-6.jpg",
-      icon: <FiberManualRecordIcon sx={{fontSize:"20px", paddingRight:"5px"}} />,
+      icon: (
+        <FiberManualRecordIcon sx={{ fontSize: "20px", paddingRight: "5px" }} />
+      ),
     },
     { name: "Eve Davis", avatar: "/path-to-avatar-7.jpg", icon: <WifiIcon /> },
     {
       name: "Frank Clark",
       avatar: "/path-to-avatar-8.jpg",
-      icon: <FiberManualRecordIcon sx={{fontSize:"20px", paddingRight:"5px"}} />,
+      icon: (
+        <FiberManualRecordIcon sx={{ fontSize: "20px", paddingRight: "5px" }} />
+      ),
     },
   ];
-
-  const handleLoadMoreFollowing = () => {
-    const newItemsToShow = followingItemsToShow + 4;
-    setFollowingItemsToShow(newItemsToShow);
-    if (newItemsToShow >= listItems.length) setShowMoreFollowing(false);
-    setShowLessFollowing(true);
-  };
-
-  const handleShowLessFollowing = () => {
-    const newItemsToShow = followingItemsToShow - 4;
-    setFollowingItemsToShow(newItemsToShow);
-    if (newItemsToShow < listItems.length) setShowMoreFollowing(true);
-    if (newItemsToShow <= 4) setShowLessFollowing(false);
-  };
 
   const drawerContent = () => {
     return (
       <Box
         sx={{ backgroundColor: colors.background, height: "100%", padding: 2 }}
       >
-        {/* Drawer Header */}
-        <Toolbar sx={{ width: "100%" }}>
-          <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
+        {/* Drawer Header with Segment Icon */}
+        <Toolbar sx={{ width: "100%", justifyContent: "space-between" }}>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
             <img
               src={icon}
               alt="Logo"
@@ -149,12 +177,15 @@ const MainLayout = ({ children }) => {
             <Typography variant="h5" noWrap sx={{ color: colors.textColor }}>
               Dare<span style={{ color: "#FF4F4F" }}>.Me</span>
             </Typography>
-            
           </Box>
-          <SegmentIcon color="primary" sx={{color:"grey"}}/>
+          <SegmentIcon
+            color="primary"
+            sx={{ color: "grey", cursor: "pointer" }}
+            onClick={handleDrawerToggle}
+          />
         </Toolbar>
 
-        {/* New Feeds Heading */}
+        {/* New Feeds Section */}
         <Box sx={{ padding: "13px 16px" }}>
           <Typography
             variant="subtitle2"
@@ -167,14 +198,13 @@ const MainLayout = ({ children }) => {
             New Feeds
           </Typography>
         </Box>
-        {/* New Feeds List Items */}
         <List sx={{ padding: "10px 8px" }}>
           {listItemss.slice(0, newFeedsItemsToShow).map((item, index) => (
-            <ListItem key={index} sx={{ padding: "8px 8px" }} >
+            <ListItem key={index} sx={{ padding: "8px 8px" }}>
               <ListItemButton
                 sx={{
                   borderRadius: "10px",
-                 padding: "10px 8px" ,
+                  padding: "10px 8px",
                   "&:hover": {
                     backgroundColor: colors.hoverBackground,
                     color: colors.textColor,
@@ -184,10 +214,7 @@ const MainLayout = ({ children }) => {
                 }}
                 onClick={item?.onPress}
               >
-                {/* Icon on the left */}
                 <ListItemIcon sx={{ color: "white" }}>{item.icon}</ListItemIcon>
-
-                {/* Text in the list */}
                 <ListItemText
                   primary={item.text || item.name}
                   sx={{ color: colors.textColor }}
@@ -197,13 +224,11 @@ const MainLayout = ({ children }) => {
           ))}
         </List>
 
-        {/* Load More / Show Less Button */}
-
         {/* Divider */}
         <Divider sx={{ backgroundColor: colors.textColor, opacity: 0.2 }} />
 
-        {/* Following Heading */}
-        <Box sx={{padding: "15px 16px" ,  }}>
+        {/* Followings Section */}
+        <Box sx={{ padding: "15px 16px" }}>
           <Typography
             variant="subtitle2"
             sx={{
@@ -215,21 +240,13 @@ const MainLayout = ({ children }) => {
             Followings
           </Typography>
         </Box>
-
-        {/* Following List Items */}
         <List sx={{ padding: "4px 4px" }}>
           {listItems.slice(0, followingItemsToShow).map((item, index) => (
             <ListItem key={index} disablePadding>
               <ListItemButton
                 sx={{
-                  padding: "10px 8px" ,
+                  padding: "10px 8px",
                   borderRadius: "10px",
-                  // "&:hover": {
-                  //   backgroundColor: colors.hoverBackground,
-                  //   color: colors.textColor,
-                  // },
-                  // backgroundColor: colors.background,
-                  // color: colors.textColor,
                 }}
               >
                 <ListItemIcon>
@@ -237,7 +254,7 @@ const MainLayout = ({ children }) => {
                 </ListItemIcon>
                 <ListItemText
                   primary={item.name}
-                  sx={{ color: colors.textColor, }}
+                  sx={{ color: colors.textColor }}
                 />
                 {item.icon}
               </ListItemButton>
@@ -408,7 +425,6 @@ const MainLayout = ({ children }) => {
             </Typography>
           </Box>
 
-          {/* Right Side Icons (Add, Notifications, Avatar) */}
           <Box sx={{ display: "flex", alignItems: "center", ml: "auto" }}>
             {/* Add Button Icon */}
             <IconButton
@@ -432,7 +448,6 @@ const MainLayout = ({ children }) => {
               <NotificationsIcon />
             </IconButton>
 
-            {/* Avatar */}
             <Avatar
               sx={{
                 width: 32,
@@ -440,16 +455,33 @@ const MainLayout = ({ children }) => {
                 backgroundColor: colors.primary,
                 cursor: "pointer",
               }}
+              onClick={handleAvatarClick} // Opens the menu when avatar is clicked
             >
               A
             </Avatar>
+
+            {/* Menu for Logout and other options */}
+            <Menu
+              anchorEl={anchorEl}
+              open={Boolean(anchorEl)}
+              onClose={handleMenuClose}
+              MenuListProps={{
+                "aria-labelledby": "avatar-button",
+              }}
+            >
+              <MenuItem onClick={handleMenuClose}>Profile</MenuItem>{" "}
+              {/* You can add a Profile menu item */}
+              <MenuItem onClick={handleLogout}>Logout</MenuItem>{" "}
+              {/* Logout option */}
+            </Menu>
           </Box>
         </Toolbar>
       </AppBar>
 
       <Drawer
         variant={isMobile ? "temporary" : "permanent"}
-        open={open}
+        anchor="left"
+        open={isDrawerOpen}
         onClose={handleDrawerToggle}
         sx={{
           width: drawerWidth,

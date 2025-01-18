@@ -20,7 +20,7 @@ export default function ChannelPageCardGrid() {
           justifyContent: "start", 
           gap: 5, // Adds spacing between cards
           width: "100%", 
-          marginLeft:"10%",
+          marginLeft:"5%",
         }}
       >
         {Array.from({ length: Math.min(visibleCards, totalCards) }).map((_, index) => (

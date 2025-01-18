@@ -1,9 +1,16 @@
 import React from "react";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import colors from "../../style/color"; // Assuming you have a `colors` file.
 
 const LoginComponent = () => {
+  const navigate = useNavigate(); // Initialize the navigate function
+
+  const handlenav = (n) => {
+    navigate(n); // Navigate to the route passed as argument
+  };
+
   return (
     <Box
       sx={{
@@ -60,7 +67,7 @@ const LoginComponent = () => {
             fontSize: "9px",
             marginLeft: "4px",
           }}
-        >
+       onClick={()=>handlenav("/signup")} >
           Create an account
         </Typography>
       </Typography>

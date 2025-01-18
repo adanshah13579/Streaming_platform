@@ -2,8 +2,14 @@ import React from "react";
 import { Box, Typography, TextField, Button } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import colors from "../../style/color"; // Assuming you have a `colors` file.
+import { useNavigate } from "react-router-dom";
 
 const SignupComponent = () => {
+  const navigate = useNavigate(); 
+
+  const handlenav = (n) => {
+    navigate(n); 
+  };
   return (
     <Box
       sx={{
@@ -59,7 +65,7 @@ const SignupComponent = () => {
         textAlign="start"
         sx={{ color: "grey", fontSize: "8px", marginBottom: "10px" }}
       >
-        New user?{" "}
+        Already a user?{" "}
         <Typography
           component="span"
           sx={{
@@ -68,8 +74,9 @@ const SignupComponent = () => {
             fontSize: "9px",
             marginLeft: "4px",
           }}
+          onClick={()=>handlenav("/login")}
         >
-          Create an account
+          Login now
         </Typography>
       </Typography>
 

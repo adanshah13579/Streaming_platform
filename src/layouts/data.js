@@ -1,18 +1,45 @@
-const listItemss = [
-    { text: "Live Dares", icon: <LiveTvIcon />, onPress: () => navigate("/") },
-    { text: "Popular Dares", icon: <StarIcon /> },
-    {
-      text: "Following",
-      icon: <PeopleIcon />,
-      onPress: () => navigate("/following"),
-    },
-    { text: "Start Streaming", icon: <CastIcon /> },
-    { text: "Save Clips", icon: <SaveIcon /> },
-    { name: "John Doe", avatar: "/path-to-avatar-1.jpg", icon: <WifiIcon /> },
-    {
-      name: "Jane Smith",
-      avatar: "/path-to-avatar-2.jpg",
-      icon: <FiberManualRecordIcon />,
-    },
-    // more items
-  ];
+const messages = [
+  {
+    avatar: "https://example.com/avatar1.jpg",
+    name: "Adan Shah",
+    time: "🔥 3m ago",
+    message: "Hey, how are you?",
+    isHighlighted: false,
+  },
+  {
+    avatar: "https://example.com/avatar2.jpg",
+    name: "John Doe",
+    time: "🔥 2m ago",
+    message: "I'm doing great! Thanks for asking.",
+    isHighlighted: true,
+  },
+  {
+    avatar: "https://example.com/avatar2.jpg",
+    name: "John Doe",
+    time: "🔥 2m ago",
+    message: "I'm doing great! Thanks for asking.",
+    isHighlighted: true,
+  },
+  {
+    avatar: "https://example.com/avatar2.jpg",
+    name: "John Doe",
+    time: "🔥 2m ago",
+    message: "I'm doing great! Thanks for asking.",
+    isHighlighted: true,
+  },
+  {
+    avatar: "https://example.com/avatar2.jpg",
+    name: "John Doe",
+    time: "🔥 2m ago",
+    message: "I'm doing great! Thanks for asking.",
+    isHighlighted: true,
+  },
+  {
+    avatar: "https://example.com/avatar2.jpg",
+    name: "John Doe",
+    time: "🔥 2m ago",
+    message: "I'm doing great! Thanks for asking.",
+    isHighlighted: true,
+  },
+  // Add more messages...
+];
