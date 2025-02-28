@@ -10,7 +10,7 @@ const LiveBox = () => {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#0B0D1A", // Glass effect background
+        backgroundColor: "#0B0D1A", 
         borderRadius: "12px",
         width: { xs: "100%", sm: "100%", md: "100%" }, // Responsive width
         padding: "32px",
@@ -18,7 +18,6 @@ const LiveBox = () => {
         boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)",
       }}
     >
-      {/* Drag files here text */}
       <Typography
         variant="h6"
         sx={{
