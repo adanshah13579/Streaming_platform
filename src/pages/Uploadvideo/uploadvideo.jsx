@@ -65,7 +65,6 @@ const UploadVideo = () => {
           >
             <OtherWaysToUpload />
 
-            {/* Add to Playlist Section */}
             <Box
               sx={{
                 display: "flex",
@@ -84,12 +83,10 @@ const UploadVideo = () => {
               </IconButton>
             </Box>
 
-            {/* Cards */}
             <ExtremeDareCard />
             <ExtremeDareCard />
             <ExtremeDareCard />
 
-            {/* Manage More Button */}
             <Button
                   variant="contained"
                   sx={{
