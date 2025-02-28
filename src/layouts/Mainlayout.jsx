@@ -39,6 +39,8 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import BrowseCategoryIcon from "@mui/icons-material/Category"; // Add the icon for categories
 import { ExploreOutlined } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
+import girlpic from "../assets/images/str1.png"
+
 
 const drawerWidth = 260;
 
@@ -309,7 +311,7 @@ const MainLayout = ({ children }) => {
         <CardComponent
           text={"Join & Earn"}
           imageSrc={
-            "https://s3-alpha-sig.figma.com/img/e4cc/1148/d8e224020578fcb63ddb47115d3ff55d?Expires=1737936000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IDAK5bl08Os-S1mRs0q2RdVbDDzG4hVqMrFlvuMGfassYOymadgT9QmnHAh8qzLdf-jj-V36IsExZTos4ZXYNmtmXAyqLBVWjZYpCJtj6LNk5PKpv18l6h~rp3VrwpDomPEAba~rE8H8ykf2LYKrTrMLj8ZhQWiOPbLfV5Eh~Uy6nVhpgXnTxZtzTch~gGtEZw-O4rgKmqVMtpiIeAGmjLMH61PrkzYDWDk1s~GQlUrlvekW5rkxYqMzDYd9hjk7lj6-z2k5o49IHkoNTzVRByHBGvhV2w-zvcgeh3ch8WXRhFV1HjmxMOliKEZWu-mT0TTHiwK2Lb6ZfPUS5ywEug__"
+            girlpic
           }
         />
       </Box>
@@ -349,7 +351,7 @@ const MainLayout = ({ children }) => {
               display: "flex",
               alignItems: "center",
               cursor: "pointer",
-              marginRight: { xs: 1, sm: 3 },
+              marginRight: { xs: 1, sm: 3 , },
             }}
             onClick={handleMenuOpen}
           >
@@ -491,6 +493,7 @@ const MainLayout = ({ children }) => {
             height: "100vh",
             boxSizing: "border-box",
             backgroundColor: colors.background,
+          
             color: colors.textColor,
             overflowY: "auto",
             "&::-webkit-scrollbar": {

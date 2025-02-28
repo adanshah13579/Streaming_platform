@@ -15,7 +15,7 @@ export const TrenidngSubStreamCard = () => {
             height: "80px",
             display: "flex",
             alignItems: "center",
-            backgroundColor: "#E4E4E41A",
+            backgroundColor: "#111428",
             boxShadow: "none",
             overflow: "hidden",
             gap: "10px",
@@ -28,8 +28,8 @@ export const TrenidngSubStreamCard = () => {
               src="https://via.placeholder.com/70"
               alt="Streamer"
               sx={{
-                width: 50,
-                height: 50,
+                width: 62,
+                height: 62,
                 borderRadius: "50%",
                 position: "relative",
                 left: "10px",

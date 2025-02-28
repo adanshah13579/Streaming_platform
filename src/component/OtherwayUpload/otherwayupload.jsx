@@ -15,7 +15,7 @@ const OtherWaysToUpload = () => {
         alignItems: 'flex-start',
         gap:"8px",
         backgroundColor: 'rgba(255, 255, 255, 0)', // Transparent background (glass effect)
-        width: { xs: '45%', sm: '35%', md: '30%' }, // Square shape box
+        width: { xs: '1005', sm: '100', md: '100%' }, // Square shape box
         padding: '16px',
         borderRadius: '8px',
         // Slight shadow for visibility

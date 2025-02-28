@@ -19,12 +19,16 @@ import LiveVideoPage from "./pages/LiveVideoPage/Livevideopage";
 import Normalvideopage from "./pages/NormalVideoPage/normalvideo";
 import ChannelProfilePage from "./pages/ChannelProfileChange/channelprofilePage";
 import ChatsystemPage from "./pages/ChatSystemPage/Chatsystempage";
+import Saveclips from "./pages/SaveClipPage/saveclip";
+import LeaderboardPage from "./pages/Leaderboardpage/Leaderboardpage";
+import Browse from "./pages/Browse/Browse";
+import UploadVideo from "./pages/Uploadvideo/uploadvideo";
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/home" element={<HomePage />}></Route>
         <Route path="/following" element={<FollowingPage />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>
@@ -36,6 +40,20 @@ const App = () => {
         <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
         <Route path="/channel_profile" element={<ChannelProfilePage/>}></Route>
         <Route path="/chatsystem" element={<ChatsystemPage/>}></Route>
+
+
+        <Route path="/Saveclips" element={<Saveclips/>}></Route>
+        <Route path="/LeaderboardPage" element={<LeaderboardPage/>}></Route>
+        <Route path="/browse" element={<Browse/>}></Route>
+        <Route path="/" element={<UploadVideo
+        />}></Route>
+
+        
+
+        
+
+        
+        
         
 
 

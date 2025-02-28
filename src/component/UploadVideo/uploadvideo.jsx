@@ -80,7 +80,7 @@ const UploadComponent = () => {
       fontSize: '10px', // Adjust icon size
     }}
   >
-    <UploadIcon sx={{ fontSize: '13px' }} /> {/* Adjusted icon size */}
+    <UploadIcon sx={{ fontSize: '13px' }} /> 
   </IconButton>
   Choose your file
 </Button>

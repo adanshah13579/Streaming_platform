@@ -5,15 +5,18 @@ import { TrenidngSubStreamCard } from "./trendingstreamcar";
 
 export const Trendingstreamerscard = () => {
   return (
-    <Box sx={{ textAlign: "center", margin: "20px" }}>
+    <Box sx={{  margin: "20px" }}>
       {/* Heading: "Trending Streamers" */}
       <Typography
-        variant="h5"
+        variant="h6"
         sx={{
           fontFamily: "Poppins",
           fontWeight: 300,
           color: "white",
           marginBottom: "20px",
+          alignSelf:"start",
+          pl:2,
+          mb:5
         }}
       >
         Trending Streamers
@@ -26,15 +29,16 @@ export const Trendingstreamerscard = () => {
       <TrenidngSubStreamCard/>  <TrenidngSubStreamCard/>
 
       {/* Discover Button */}
-      <Box sx={{ marginTop: "20px" }}>
+      <Box sx={{ marginTop: "20px" ,pl:3}}>
         <Button
           variant="contained"
           sx={{
-            width:"200px",
-            height:"50px",
+           
+            width:"90%",
+            height:"55px",
             backgroundColor: "#E4E4E41A",
             color: "white",
-            padding: "8px 20px",
+            padding: "12px 20px",
             borderRadius: "10px",
             fontFamily: "Poppins",
             fontSize: "14px",
@@ -44,7 +48,7 @@ export const Trendingstreamerscard = () => {
             },
           }}
         >
-          Discover
+          Discover More
         </Button>
       </Box>
     </Box>
