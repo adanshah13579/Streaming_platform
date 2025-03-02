@@ -23,6 +23,9 @@ import Saveclips from "./pages/SaveClipPage/saveclip";
 import LeaderboardPage from "./pages/Leaderboardpage/Leaderboardpage";
 import Browse from "./pages/Browse/Browse";
 import UploadVideo from "./pages/Uploadvideo/uploadvideo";
+import TrendingNFT from "./pages/TrendingNft/TrendingNft";
+import NFTView from "./pages/NftViewPage/Nftview";
+import CreatorStream from "./pages/CreaterStreamPage/CreaterStreamPage";
 
 const App = () => {
   return (
@@ -34,29 +37,24 @@ const App = () => {
         <Route path="/signup" element={<SignupPage />}></Route>
         <Route path="/publicdare" element={<PublicDarePage />}></Route>
         <Route path="/startstreaming" element={<StartStreaming />}></Route>
-        <Route path="/MyVideoPage" element={<MyVideosPage/>}></Route>
+        <Route path="/MyVideoPage" element={<MyVideosPage />}></Route>
 
-        <Route path="/livevideo" element={<LiveVideoPage/>}></Route>
-        <Route path="/normalvideos" element={<Normalvideopage/>}></Route>
-        <Route path="/channel_profile" element={<ChannelProfilePage/>}></Route>
-        <Route path="/chatsystem" element={<ChatsystemPage/>}></Route>
+        <Route path="/livevideo" element={<LiveVideoPage />}></Route>
+        <Route path="/normalvideos" element={<Normalvideopage />}></Route>
+        <Route path="/channel_profile" element={<ChannelProfilePage />}></Route>
+        <Route path="/chatsystem" element={<ChatsystemPage />}></Route>
+
+        <Route path="/Saveclips" element={<Saveclips />}></Route>
+        <Route path="/LeaderboardPage" element={<LeaderboardPage />}></Route>
+        <Route path="/browse" element={<Browse />}></Route>
+        <Route path="/uploadvideo" element={<UploadVideo />}></Route>
+        <Route path="/trendingnft" element={<TrendingNFT />}></Route>
+        <Route path="/nftview" element={<NFTView />}></Route>
+        <Route path="/" element={<CreatorStream />}></Route>
 
 
-        <Route path="/Saveclips" element={<Saveclips/>}></Route>
-        <Route path="/LeaderboardPage" element={<LeaderboardPage/>}></Route>
-        <Route path="/browse" element={<Browse/>}></Route>
-        <Route path="/" element={<UploadVideo
-        />}></Route>
 
         
-
-        
-
-        
-        
-        
-
-
 
       </Routes>
     </Router>

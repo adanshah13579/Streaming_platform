@@ -340,6 +340,7 @@ const MainLayout = ({ children }) => {
               edge="start"
               onClick={handleDrawerToggle}
               sx={{ mr: 2 }}
+              
             >
               <MenuIcon />
             </IconButton>
@@ -485,7 +486,9 @@ const MainLayout = ({ children }) => {
         anchor="left"
         open={isDrawerOpen}
         onClose={handleDrawerToggle}
+        
         sx={{
+
           width: drawerWidth,
           flexShrink: 0,
           "& .MuiDrawer-paper": {
@@ -493,6 +496,8 @@ const MainLayout = ({ children }) => {
             height: "100vh",
             boxSizing: "border-box",
             backgroundColor: colors.background,
+            borderRight: "2px solid #474958 !important", // ✅ Force it to appear
+
           
             color: colors.textColor,
             overflowY: "auto",
