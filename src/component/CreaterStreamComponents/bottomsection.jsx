@@ -25,19 +25,21 @@ const ScheduleStream = () => {
 
       {/* Button */}
       <Button
-        variant="contained"
-        sx={{
-          backgroundColor: "#715AFF",
-          borderRadius: "12px",
-          fontSize: "0.8rem",
-          padding: "10px 40px",
-          textTransform: "none",
-          width:"40%",
-          "&:hover": { backgroundColor: "#5b47e0" },
-        }}
-      >
-        Schedule Your Next Stream
-      </Button>
+  variant="contained"
+  sx={{
+    backgroundColor: "#715AFF",
+    borderRadius: "12px",
+    fontSize: { xs: "0.7rem", sm: "0.8rem", md: "0.9rem" }, // Adjust font size
+    padding: { xs: "8px 20px", sm: "10px 30px", md: "12px 40px" }, // Adjust padding
+    width: { xs: "80%", sm: "60%", md: "40%" }, // Width adapts based on screen size
+    maxWidth: "300px", // Prevents button from being too large on big screens
+    textTransform: "none",
+    "&:hover": { backgroundColor: "#5b47e0" },
+  }}
+>
+  Schedule Your Next Stream
+</Button>
+
     </Box>
   );
 };

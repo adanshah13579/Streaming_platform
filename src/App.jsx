@@ -26,6 +26,7 @@ import UploadVideo from "./pages/Uploadvideo/uploadvideo";
 import TrendingNFT from "./pages/TrendingNft/TrendingNft";
 import NFTView from "./pages/NftViewPage/Nftview";
 import CreatorStream from "./pages/CreaterStreamPage/CreaterStreamPage";
+import CommunityPage from "./pages/Communityforum/Communityforum";
 
 const App = () => {
   return (
@@ -50,7 +51,10 @@ const App = () => {
         <Route path="/uploadvideo" element={<UploadVideo />}></Route>
         <Route path="/trendingnft" element={<TrendingNFT />}></Route>
         <Route path="/nftview" element={<NFTView />}></Route>
-        <Route path="/" element={<CreatorStream />}></Route>
+        <Route path="/creatstream" element={<CreatorStream />}></Route>
+        <Route path="/" element={<CommunityPage />}></Route>
+
+        
 
 
 
